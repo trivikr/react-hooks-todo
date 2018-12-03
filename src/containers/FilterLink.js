@@ -3,14 +3,14 @@ import { setVisibilityFilter } from "../actions";
 import Link from "../components/Link";
 import StoreContext from "../store/StoreContext";
 
-export default function(props) {
+export default function({ filter, children }) {
   const [state, dispatch] = useContext(StoreContext);
   return (
     <Link
-      active={props.filter === state.visibilityFilter}
-      onClick={() => dispatch(setVisibilityFilter(props.filter))}
+      active={filter === state.visibilityFilter}
+      onClick={() => dispatch(setVisibilityFilter(filter))}
     >
-      {props.children}
+      {children}
     </Link>
   );
 }

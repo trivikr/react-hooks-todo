@@ -1,12 +1,11 @@
 import React, { useReducer } from "react";
 import StoreContext from "./StoreContext";
 
-export default function Store(props) {
-  const initialState = props.rootReducer();
-  const [state, dispatch] = useReducer(props.rootReducer, initialState);
+export default function Store({ rootReducer, children }) {
+  const initialState = rootReducer();
   return (
-    <StoreContext.Provider value={[state, dispatch]}>
-      {props.children}
+    <StoreContext.Provider value={useReducer(rootReducer, initialState)}>
+      {children}
     </StoreContext.Provider>
   );
 }
