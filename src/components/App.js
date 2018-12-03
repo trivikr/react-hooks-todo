@@ -16,8 +16,8 @@ const App = () => {
     <Context.Provider value={dispatch}>
       <div>
         <AddTodo dispatch={dispatch} />
-        {/*<VisibleTodoList />
-        <Footer />*/}
+        <VisibleTodoList state={state} dispatch={dispatch} />
+        {/*<Footer />*/}
       </div>
     </Context.Provider>
   );
