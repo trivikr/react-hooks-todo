@@ -4,22 +4,23 @@ import AddTodo from "../containers/AddTodo";
 import VisibleTodoList from "../containers/VisibleTodoList";
 import rootReducer from "../reducers";
 import { VisibilityFilters } from "../actions";
-
-const Context = React.createContext();
+import Store from "../store/Store";
 
 const App = () => {
-  const [state, dispatch] = useReducer(rootReducer, {
-    visibilityFilter: VisibilityFilters.SHOW_ALL,
-    todos: []
-  });
   return (
-    <Context.Provider value={dispatch}>
+    <Store
+      rootReducer={rootReducer}
+      initialValue={{
+        visibilityFilter: VisibilityFilters.SHOW_ALL,
+        todos: []
+      }}
+    >
       <div>
-        <AddTodo dispatch={dispatch} />
-        <VisibleTodoList state={state} dispatch={dispatch} />
+        <AddTodo />
+        <VisibleTodoList />
         {/*<Footer />*/}
       </div>
-    </Context.Provider>
+    </Store>
   );
 };
 

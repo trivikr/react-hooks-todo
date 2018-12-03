@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { addTodo } from "../actions";
+import StoreContext from "../store/StoreContext";
 
-const AddTodo = ({ dispatch }) => {
+const AddTodo = () => {
   let input;
+  const [state, dispatch] = useContext(StoreContext);
 
   return (
     <div>
