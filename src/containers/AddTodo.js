@@ -4,7 +4,7 @@ import StoreContext from "../store/StoreContext";
 
 const AddTodo = () => {
   let input;
-  const [state, dispatch] = useContext(StoreContext);
+  const [, dispatch] = useContext(StoreContext);
 
   return (
     <div>
