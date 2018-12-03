@@ -1,16 +1,33 @@
 {
   "name": "react-hooks-todo",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Experimenting with writing ToDo App with React Hooks",
-  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/trivikr/react-hooks-todo.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "keywords": [
+    "React",
+    "Hooks",
+    "ToDo"
+  ],
   "author": "Kamat, Trivikram",
   "license": "MIT",
   "bugs": {
