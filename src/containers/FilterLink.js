@@ -4,10 +4,10 @@ import Link from "../components/Link";
 import StoreContext from "../store/StoreContext";
 
 export default function({ filter, children }) {
-  const [state, dispatch] = useContext(StoreContext);
+  const [{ visibilityFilter }, dispatch] = useContext(StoreContext);
   return (
     <Link
-      active={filter === state.visibilityFilter}
+      active={filter === visibilityFilter}
       onClick={() => dispatch(setVisibilityFilter(filter))}
     >
       {children}
