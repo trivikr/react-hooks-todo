@@ -10,10 +10,11 @@ const todos = (state = [], action) => {
         }
       ];
     case "TOGGLE_TODO":
-      return state.map(
-        todo =>
-          todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
+      return state.map(todo =>
+        todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
       );
+    case "RESET":
+      return action.payload.todos;
     default:
       return state;
   }
