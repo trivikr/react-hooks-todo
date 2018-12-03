@@ -1,0 +1,20 @@
+{
+  "name": "react-hooks-todo",
+  "version": "1.0.0",
+  "description": "Experimenting with writing ToDo App with React Hooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trivikr/react-hooks-todo.git"
+  },
+  "keywords": [],
+  "author": "Kamat, Trivikram",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trivikr/react-hooks-todo/issues"
+  },
+  "homepage": "https://github.com/trivikr/react-hooks-todo#readme"
+}
