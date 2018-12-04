@@ -2,7 +2,9 @@
 
 This project replaces Redux from [Redux ToDo App](https://redux.js.org/basics/exampletodolist) with React Hooks
 
-- This project was created for [Seattle ReactJS December 2018 Meetup](https://www.meetup.com/seattle-react-js/events/256260457/)
+- This project was created for a talk at [Seattle ReactJS December 2018 Meetup](https://www.meetup.com/seattle-react-js/events/256260457/)
+- Slides of the talk can be viewed [here](https://slides.com/trivikram/will-react-hooks-replace-redux#/)
+- The link to the video will be added once it's recorded and uploaded.
 - It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to run this project
