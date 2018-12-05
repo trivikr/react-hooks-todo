@@ -29,4 +29,4 @@ This project replaces Redux from [Redux ToDo App](https://redux.js.org/basics/ex
 ## It's too difficult, can I just see the solution?
 
 - Doing it by following the steps will help you learn React Hooks. If you want help for specific steps, the experimental commits can be viewed in [hooks branch](https://github.com/trivikr/react-hooks-todo/commits/hooks)
-- Single commit which removes redux in favor of React Hooks can be viewed in [hooks-final branch](https://github.com/trivikr/react-hooks-todo/commit/d2725723a1e462173dff71c299dede7cbd522027)
+- Single commit which removes redux in favor of React Hooks can be viewed in [hooks-final branch](https://github.com/trivikr/react-hooks-todo/commit/86ce4e176df8670c5d4558d0673d679aa2d9db0f)
