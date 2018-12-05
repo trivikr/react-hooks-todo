@@ -1,9 +1,10 @@
-import React from "react";
-import { connect } from "react-redux";
+import React, { useContext } from "react";
 import { addTodo } from "../actions";
+import StoreContext from "../store/StoreContext";
 
-const AddTodo = ({ dispatch }) => {
+const AddTodo = () => {
   let input;
+  const [, dispatch] = useContext(StoreContext);
 
   return (
     <div>
@@ -24,4 +25,4 @@ const AddTodo = ({ dispatch }) => {
   );
 };
 
-export default connect()(AddTodo);
+export default AddTodo;

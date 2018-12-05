@@ -1,7 +1,8 @@
-import { connect } from "react-redux";
+import React, { useContext } from "react";
 import { toggleTodo } from "../actions";
 import TodoList from "../components/TodoList";
 import { VisibilityFilters } from "../actions";
+import StoreContext from "../store/StoreContext";
 
 const getVisibleTodos = (todos, filter) => {
   switch (filter) {
@@ -16,15 +17,12 @@ const getVisibleTodos = (todos, filter) => {
   }
 };
 
-const mapStateToProps = state => ({
-  todos: getVisibleTodos(state.todos, state.visibilityFilter)
-});
-
-const mapDispatchToProps = dispatch => ({
-  toggleTodo: id => dispatch(toggleTodo(id))
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TodoList);
+export default function VisibleTodoList() {
+  const [{ todos, visibilityFilter }, dispatch] = useContext(StoreContext);
+  return (
+    <TodoList
+      todos={getVisibleTodos(todos, visibilityFilter)}
+      toggleTodo={id => dispatch(toggleTodo(id))}
+    />
+  );
+}
