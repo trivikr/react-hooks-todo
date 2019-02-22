@@ -2,8 +2,11 @@ import React, { useContext } from "react";
 import { setVisibilityFilter } from "../actions";
 import Link from "../components/Link";
 import StoreContext from "../store/StoreContext";
+import { VisibilityFilter } from "../actions";
 
-export default function FilterLink({ filter, children }) {
+const FilterLink: React.FC<{
+  filter: VisibilityFilter;
+}> = ({ filter, children }) => {
   const [{ visibilityFilter }, dispatch] = useContext(StoreContext);
   return (
     <Link
@@ -13,4 +16,6 @@ export default function FilterLink({ filter, children }) {
       {children}
     </Link>
   );
-}
+};
+
+export default FilterLink;

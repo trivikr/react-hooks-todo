@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { addTodo } from "../actions";
 import StoreContext from "../store/StoreContext";
 
 const AddTodo = () => {
-  let input;
+  const [todo, setTodo] = useState("");
   const [, dispatch] = useContext(StoreContext);
 
   return (
@@ -11,14 +11,15 @@ const AddTodo = () => {
       <form
         onSubmit={e => {
           e.preventDefault();
-          if (!input.value.trim()) {
-            return;
-          }
-          dispatch(addTodo(input.value));
-          input.value = "";
+          dispatch(addTodo(todo));
+          setTodo("");
         }}
       >
-        <input ref={node => (input = node)} />
+        <input
+          type="text"
+          value={todo}
+          onChange={e => setTodo(e.target.value)}
+        />
         <button type="submit">Add Todo</button>
       </form>
     </div>
