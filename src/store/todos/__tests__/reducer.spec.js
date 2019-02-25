@@ -1,13 +1,13 @@
-import todos from "../todos";
+import { todosReducer } from "../reducer";
 
 describe("todos reducer", () => {
   it("should handle initial state", () => {
-    expect(todos(undefined, {})).toEqual([]);
+    expect(todosReducer(undefined, {})).toEqual([]);
   });
 
   it("should handle ADD_TODO", () => {
     expect(
-      todos([], {
+      todosReducer([], {
         type: "ADD_TODO",
         text: "Run the tests",
         id: 0
@@ -21,7 +21,7 @@ describe("todos reducer", () => {
     ]);
 
     expect(
-      todos(
+      todosReducer(
         [
           {
             text: "Run the tests",
@@ -49,7 +49,7 @@ describe("todos reducer", () => {
     ]);
 
     expect(
-      todos(
+      todosReducer(
         [
           {
             text: "Run the tests",
@@ -89,7 +89,7 @@ describe("todos reducer", () => {
 
   it("should handle TOGGLE_TODO", () => {
     expect(
-      todos(
+      todosReducer(
         [
           {
             text: "Run the tests",
