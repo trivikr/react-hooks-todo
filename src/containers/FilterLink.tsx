@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { setVisibilityFilter } from "../actions";
+import { setVisibilityFilter } from "../store/visibilityFilter/actions";
 import Link from "../components/Link";
 import StoreContext from "../store/StoreContext";
-import { VisibilityFilter } from "../actions";
+import { VisibilityFilter } from "../store/visibilityFilter/types";
 
 const FilterLink: React.FC<{
   filter: VisibilityFilter;

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { toggleTodo } from "../actions";
+import { toggleTodo } from "../store/todos/actions";
 import TodoList from "../components/TodoList";
-import { VisibilityFilter } from "../actions";
+import { VisibilityFilter } from "../store/visibilityFilter/types";
 import StoreContext from "../store/StoreContext";
 import { TodoType } from "../components/TodoType";
 

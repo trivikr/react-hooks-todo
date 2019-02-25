@@ -1,4 +1,4 @@
-import { VisibilityFilter } from "../../actions";
+import { VisibilityFilter } from "./types";
 
 const reducer = (state = VisibilityFilter.SHOW_ALL, action) => {
   switch (action.type) {

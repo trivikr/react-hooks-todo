@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { addTodo } from "../actions";
+import { addTodo } from "../store/todos/actions";
 import StoreContext from "../store/StoreContext";
 
 const AddTodo = () => {
