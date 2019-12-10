@@ -16,7 +16,6 @@ This project replaces Redux from [Redux ToDo App](https://redux.js.org/basics/ex
 
 ## How to replace Redux with React Hooks
 
-- Install `react@next` and `react-dom@next` so you get to play with Hooks
 - Replace `combineReducers` with a function to remove dependency on `redux` in `reducers/index.js` ([doc](https://redux.js.org/basics/reducers))
 - Create StoreContext which returns createContext ([doc](https://reactjs.org/docs/context.html))
 - Create Store using this StoreContext which creates Provider with useReducer
